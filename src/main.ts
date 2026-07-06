@@ -77,6 +77,8 @@ function renderChoices(node: InternalNode) {
   app.appendChild(choicesContainer);
 }
 
+
+
 function traverse(node: InternalNode, choiceId: string): TreeNode | undefined {
   return node.children.find(child => child.id === choiceId);
 }
