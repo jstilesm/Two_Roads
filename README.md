@@ -1,7 +1,7 @@
 The Road Not Taken
 
-Play Audio
 By Robert Frost
+
 Two roads diverged in a yellow wood,
 And sorry I could not travel both
 And be one traveler, long I stood
@@ -38,3 +38,9 @@ Data:
   - Treasure
 
 
+## Setup
+
+```bash
+npm install
+npm run dev
+```

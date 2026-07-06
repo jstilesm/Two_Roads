@@ -1,13 +1,15 @@
 {
   "meta": {
-    "title": "Dungeon of Two Passages",
-    "theme": "dungeon-crawl traversal demo",
+    "title": "Dungeon of Two Roads",
+    "theme": "Choose your path through the dungeon. Can you find the treasure?",
+    "inspiration": "Project Inspired By Robert Frost's 'The Road Not Taken'",
+    "link": "https://www.poetryfoundation.org/poems/44272/the-road-not-taken",
     "maxDepth": 4,
     "nodeCount": 31,
     "outcomeLegend": {
-      "death": "You die here. Dead end.",
-      "monster": "You encounter a monster. Dead end (or start of a fight, depending on your app).",
-      "treasure": "You find treasure. Dead end (a winning terminus)."
+      "death": "You die here. You Lose.",
+      "monster": "You've run into a monster, You Lose.",
+      "treasure": "You find treasure. You Win!"
     }
   },
   "tree": {
