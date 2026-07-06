@@ -29,7 +29,7 @@ And that has made all the difference.
 # Two Roads Dungeon Discovery
 From AI Data, develop a traversal application where user can travel through dungeon, choosing paths
 
-Data:
+## Data:
 - Observation values at each node
 - Upon making choice, provided with 4 options
   - Another Choice
@@ -37,10 +37,21 @@ Data:
   - Death
   - Treasure
 
-
+## Stack
+- **Vite** — dev server & build tooling
+- **TypeScript** — application logic, type-checked tree traversal
+- **Vitest** — unit testing (tree traversal, outcome reachability)
+- **HTML/CSS** — UI structure and styling (no framework)
+- **JSON** — dungeon tree data (`dungeon.json`)
 ## Setup
 
 ```bash
 npm install
 npm run dev
+```
+
+## Tests
+
+```bash
+npx vitest run
 ```
