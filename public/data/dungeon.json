@@ -1,0 +1,380 @@
+{
+  "meta": {
+    "title": "Dungeon of Two Passages",
+    "theme": "dungeon-crawl traversal demo",
+    "maxDepth": 4,
+    "nodeCount": 31,
+    "outcomeLegend": {
+      "death": "You die here. Dead end.",
+      "monster": "You encounter a monster. Dead end (or start of a fight, depending on your app).",
+      "treasure": "You find treasure. Dead end (a winning terminus)."
+    }
+  },
+  "tree": {
+    "id": "root",
+    "depth": 0,
+    "leaf": false,
+    "choices": [
+      {
+        "id": "rootL",
+        "observation": "You notice fresh claw marks gouged into the wall."
+      },
+      {
+        "id": "rootR",
+        "observation": "Water drips steadily nearby, echoing louder than it should."
+      }
+    ],
+    "children": [
+      {
+        "id": "rootL",
+        "depth": 1,
+        "leaf": false,
+        "choices": [
+          {
+            "id": "rootLL",
+            "observation": "A sour, metallic smell hangs heavy in the air."
+          },
+          {
+            "id": "rootLR",
+            "observation": "A thin trail of dust has been disturbed recently."
+          }
+        ],
+        "children": [
+          {
+            "id": "rootLL",
+            "depth": 2,
+            "leaf": false,
+            "choices": [
+              {
+                "id": "rootLLL",
+                "observation": "A thin trail of dust has been disturbed recently."
+              },
+              {
+                "id": "rootLLR",
+                "observation": "Cobwebs thick as rope stretch across the passage ahead."
+              }
+            ],
+            "children": [
+              {
+                "id": "rootLLL",
+                "depth": 3,
+                "leaf": false,
+                "choices": [
+                  {
+                    "id": "rootLLLL",
+                    "observation": "A faint whisper seems to come from the walls themselves."
+                  },
+                  {
+                    "id": "rootLLLR",
+                    "observation": "You spot a glint of metal half-buried in the rubble."
+                  }
+                ],
+                "children": [
+                  {
+                    "id": "rootLLLL",
+                    "depth": 4,
+                    "leaf": true,
+                    "outcome": "death",
+                    "description": "A shadow lunges from the dark and you don't see the blade coming."
+                  },
+                  {
+                    "id": "rootLLLR",
+                    "depth": 4,
+                    "leaf": true,
+                    "outcome": "monster",
+                    "description": "A giant spider drops from the ceiling, fangs bared."
+                  }
+                ]
+              },
+              {
+                "id": "rootLLR",
+                "depth": 3,
+                "leaf": false,
+                "choices": [
+                  {
+                    "id": "rootLLRL",
+                    "observation": "Cobwebs thick as rope stretch across the passage ahead."
+                  },
+                  {
+                    "id": "rootLLRR",
+                    "observation": "Strange symbols are scratched into the stone at eye level."
+                  }
+                ],
+                "children": [
+                  {
+                    "id": "rootLLRL",
+                    "depth": 4,
+                    "leaf": true,
+                    "outcome": "monster",
+                    "description": "A skeletal warrior rises from the dust, sword raised."
+                  },
+                  {
+                    "id": "rootLLRR",
+                    "depth": 4,
+                    "leaf": true,
+                    "outcome": "treasure",
+                    "description": "Sunlight breaks through above - you've found the exit, and a sack of gold with it."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rootLR",
+            "depth": 2,
+            "leaf": false,
+            "choices": [
+              {
+                "id": "rootLRL",
+                "observation": "The torchlight flickers as if something just moved beyond it."
+              },
+              {
+                "id": "rootLRR",
+                "observation": "A cold draft brushes past you, carrying the smell of wet stone."
+              }
+            ],
+            "children": [
+              {
+                "id": "rootLRL",
+                "depth": 3,
+                "leaf": false,
+                "choices": [
+                  {
+                    "id": "rootLRLL",
+                    "observation": "Water drips steadily nearby, echoing louder than it should."
+                  },
+                  {
+                    "id": "rootLRLR",
+                    "observation": "The air grows warmer, and you hear a low, distant hum."
+                  }
+                ],
+                "children": [
+                  {
+                    "id": "rootLRLL",
+                    "depth": 4,
+                    "leaf": true,
+                    "outcome": "death",
+                    "description": "The floor gives way into a spiked pit far below."
+                  },
+                  {
+                    "id": "rootLRLR",
+                    "depth": 4,
+                    "leaf": true,
+                    "outcome": "treasure",
+                    "description": "You find a jeweled dagger resting on a stone pedestal."
+                  }
+                ]
+              },
+              {
+                "id": "rootLRR",
+                "depth": 3,
+                "leaf": false,
+                "choices": [
+                  {
+                    "id": "rootLRRL",
+                    "observation": "Faint scratching echoes from somewhere deep in the dark."
+                  },
+                  {
+                    "id": "rootLRRR",
+                    "observation": "A faint whisper seems to come from the walls themselves."
+                  }
+                ],
+                "children": [
+                  {
+                    "id": "rootLRRL",
+                    "depth": 4,
+                    "leaf": true,
+                    "outcome": "monster",
+                    "description": "A giant spider drops from the ceiling, fangs bared."
+                  },
+                  {
+                    "id": "rootLRRR",
+                    "depth": 4,
+                    "leaf": true,
+                    "outcome": "death",
+                    "description": "The floor gives way into a spiked pit far below."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rootR",
+        "depth": 1,
+        "leaf": false,
+        "choices": [
+          {
+            "id": "rootRL",
+            "observation": "A sour, metallic smell hangs heavy in the air."
+          },
+          {
+            "id": "rootRR",
+            "observation": "Faint scratching echoes from somewhere deep in the dark."
+          }
+        ],
+        "children": [
+          {
+            "id": "rootRL",
+            "depth": 2,
+            "leaf": false,
+            "choices": [
+              {
+                "id": "rootRLL",
+                "observation": "A thin trail of dust has been disturbed recently."
+              },
+              {
+                "id": "rootRLR",
+                "observation": "Water drips steadily nearby, echoing louder than it should."
+              }
+            ],
+            "children": [
+              {
+                "id": "rootRLL",
+                "depth": 3,
+                "leaf": false,
+                "choices": [
+                  {
+                    "id": "rootRLLL",
+                    "observation": "Cobwebs thick as rope stretch across the passage ahead."
+                  },
+                  {
+                    "id": "rootRLLR",
+                    "observation": "Faint scratching echoes from somewhere deep in the dark."
+                  }
+                ],
+                "children": [
+                  {
+                    "id": "rootRLLL",
+                    "depth": 4,
+                    "leaf": true,
+                    "outcome": "monster",
+                    "description": "Glowing eyes emerge from the gloom - a pack of cave wolves has found you."
+                  },
+                  {
+                    "id": "rootRLLR",
+                    "depth": 4,
+                    "leaf": true,
+                    "outcome": "monster",
+                    "description": "A giant spider drops from the ceiling, fangs bared."
+                  }
+                ]
+              },
+              {
+                "id": "rootRLR",
+                "depth": 3,
+                "leaf": false,
+                "choices": [
+                  {
+                    "id": "rootRLRL",
+                    "observation": "You hear the distant clatter of loose stones falling."
+                  },
+                  {
+                    "id": "rootRLRR",
+                    "observation": "Strange symbols are scratched into the stone at eye level."
+                  }
+                ],
+                "children": [
+                  {
+                    "id": "rootRLRL",
+                    "depth": 4,
+                    "leaf": true,
+                    "outcome": "death",
+                    "description": "The floor gives way into a spiked pit far below."
+                  },
+                  {
+                    "id": "rootRLRR",
+                    "depth": 4,
+                    "leaf": true,
+                    "outcome": "treasure",
+                    "description": "A chest of gold coins gleams in the torchlight, untouched for ages."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rootRR",
+            "depth": 2,
+            "leaf": false,
+            "choices": [
+              {
+                "id": "rootRRL",
+                "observation": "Faint scratching echoes from somewhere deep in the dark."
+              },
+              {
+                "id": "rootRRR",
+                "observation": "You spot a glint of metal half-buried in the rubble."
+              }
+            ],
+            "children": [
+              {
+                "id": "rootRRL",
+                "depth": 3,
+                "leaf": false,
+                "choices": [
+                  {
+                    "id": "rootRRLL",
+                    "observation": "Strange symbols are scratched into the stone at eye level."
+                  },
+                  {
+                    "id": "rootRRLR",
+                    "observation": "A sour, metallic smell hangs heavy in the air."
+                  }
+                ],
+                "children": [
+                  {
+                    "id": "rootRRLL",
+                    "depth": 4,
+                    "leaf": true,
+                    "outcome": "treasure",
+                    "description": "Sunlight breaks through above - you've found the exit, and a sack of gold with it."
+                  },
+                  {
+                    "id": "rootRRLR",
+                    "depth": 4,
+                    "leaf": true,
+                    "outcome": "monster",
+                    "description": "A hulking troll blocks the passage, roaring as it turns toward you."
+                  }
+                ]
+              },
+              {
+                "id": "rootRRR",
+                "depth": 3,
+                "leaf": false,
+                "choices": [
+                  {
+                    "id": "rootRRRL",
+                    "observation": "A sour, metallic smell hangs heavy in the air."
+                  },
+                  {
+                    "id": "rootRRRR",
+                    "observation": "You spot a glint of metal half-buried in the rubble."
+                  }
+                ],
+                "children": [
+                  {
+                    "id": "rootRRRL",
+                    "depth": 4,
+                    "leaf": true,
+                    "outcome": "monster",
+                    "description": "A hulking troll blocks the passage, roaring as it turns toward you."
+                  },
+                  {
+                    "id": "rootRRRR",
+                    "depth": 4,
+                    "leaf": true,
+                    "outcome": "monster",
+                    "description": "A giant spider drops from the ceiling, fangs bared."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
